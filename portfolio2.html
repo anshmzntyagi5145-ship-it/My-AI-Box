@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ansh Tyagi - Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:linear-gradient(135deg,#667eea,#764ba2);min-height:100vh;padding:20px}
+.main{max-width:900px;margin:auto;background:white;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.3);border:5px solid transparent;background-clip:padding-box;position:relative}
+.main::before{content:'';position:absolute;top:-5px;left:-5px;right:-5px;bottom:-5px;background:linear-gradient(45deg,#ff0080,#ff8a00,#ffeb3b,#00ff88,#00d4ff,#8a2be2);z-index:-1;border-radius:25px;animation:rotate 3s linear infinite}
+@keyframes rotate{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(360deg)}}
+header{background:linear-gradient(90deg,#0b2a5b,#e11d2d);color:white;text-align:center;padding:40px 20px;border-bottom:6px dashed #ffd700}
+header h1{font-size:42px;text-shadow:2px 2px 0 #000}.welcome{background:#fff3cd;border:3px solid #ffcc00;padding:15px;margin:20px;border-radius:15px;font-size:20px;font-weight:700;color:#7a5d00;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.hero{text-align:center;padding:30px}
+.hero h2{font-size:32px;color:#0b2a5b}.hero span{background:linear-gradient(90deg,#ff0080,#ff8a00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800}
+.skills{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;padding:20px}
+.box{width:200px;padding:20px;border-radius:15px;text-align:center;color:white;font-weight:700;transition:.3s;border:4px solid #fff;box-shadow:0 5px 15px rgba(0,0,0,.2)}
+.box:hover{transform:scale(1.08) rotate(2deg)}
+.c1{background:linear-gradient(135deg,#ff6a00,#ee0979)} .c2{background:linear-gradient(135deg,#00c6ff,#0072ff)} .c3{background:linear-gradient(135deg,#f7971e,#ffd200);color:#333}
+.c1,.c2,.c3{border:4px double white}
+.projects{padding:20px;display:flex;gap:15px;flex-wrap:wrap;justify-content:center}
+.proj{border:3px solid #0b2a5b;border-radius:12px;padding:15px;width:250px;background:#f9f9ff}
+.proj h3{color:#e11d2d}
+.contact{background:linear-gradient(135deg,#e0f7ff,#f5e6ff);padding:25px;text-align:center;border-top:5px dotted #0b2a5b}
+input,textarea{width:80%;max-width:350px;padding:12px;margin:8px;border:3px solid #764ba2;border-radius:30px;outline:none}
+input:focus,textarea:focus{border-color:#ff0080;box-shadow:0 0 10px #ff0080}
+.btn{padding:12px 30px;border:none;border-radius:30px;background:linear-gradient(90deg,#ff0080,#ff8a00);color:white;font-weight:800;cursor:pointer;font-size:16px;box-shadow:0 4px 15px rgba(0,0,0,.3);transition:.3s}
+.btn:hover{transform:scale(1.1)}
+footer{background:#0b2a5b;color:white;text-align:center;padding:15px;border-top:4px solid #ffd700}
+</style>
+</head>
+<body>
+
+<div class="main">
+<header>
+<h1>Ansh Tyagi</h1>
+<p>⭐ Aspiring Web Developer ⭐</p>
+</header>
+
+<div class="welcome">🎉 WELCOME TO MY PORTFOLIO 🎉</div>
+
+<div class="hero">
+<h2>Hello, I'm <span>Ansh Tyagi</span> 👋</h2>
+<p style="margin-top:10px;color:#555">I love to create <b>Colourful & Creative</b> Websites using HTML, CSS & JS</p>
+</div>
+
+<h2 style="text-align:center;color:#0b2a5b">💎 My Skills 💎</h2>
+<div class="skills">
+<div class="box c1">🌐<br>HTML<br>90%<br><small>Structure Expert</small></div>
+<div class="box c2">🎨<br>CSS<br>85%<br><small>Design Lover</small></div>
+<div class="box c3">⚡<br>JavaScript<br>75%<br><small>Logic Builder</small></div>
+</div>
+
+<h2 style="text-align:center;margin-top:20px;color:#0b2a5b">🚀 My Projects 🚀</h2>
+<div class="projects">
+<div class="proj"><h3>🏫 KIET Website</h3><p>College landing page with colourful UI</p></div>
+<div class="proj"><h3>🧮 Calculator</h3><p>Neon colour calculator app</p></div>
+<div class="proj"><h3>📝 To-Do App</h3><p>Colourful task manager</p></div>
+</div>
+
+<div class="contact">
+<h2>📩 Contact Me 📩</h2>
+<input id="name" placeholder="Your Name"><br>
+<input id="email" placeholder="Your Email"><br>
+<textarea id="msg" placeholder="Your Message"></textarea><br>
+<button class="btn" onclick="send()">Send Message 💌</button>
+<p id="ok" style="margin-top:15px;font-weight:700;color:green"></p>
+</div>
+
+<footer>© 2026 Ansh Tyagi | Made with ❤️ & Lots of Colours</footer>
+</div>
+
+<script>
+function send(){
+let n=document.getElementById('name').value;
+if(n==""){alert("Bhai naam to likh de!");return;}
+document.getElementById('ok').innerHTML="Thank You "+n+"! 🌈 Your message received!";
+document.getElementById('name').value="";document.getElementById('email').value="";document.getElementById('msg').value="";
+}
+</script>
+
+</div>
+</body>
+</html>
